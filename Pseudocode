@@ -1,0 +1,24 @@
+Bowling Spelet
+
+Main menu
+Options are:
+ Play
+ Rules
+
+Pseudo on Rules
+Load Rules form
+  Display rules of bowling and explaination on scoring
+  
+Exit button takes user back to main menu
+
+Pseudo on Play
+Load Play form
+  Ask for player names
+    take Player1 and Player2 of none are entered
+  
+  Display score board, player names, exit button and bowl button.
+    Randomly generate scores for each player when 'bowl' is clicked
+      Two scores per bowl but only one if the first is a strike
+      On 10th round players can have 3 bowls instead of 2
+    
+    Take user back to main menu if 'exit' is clicked
