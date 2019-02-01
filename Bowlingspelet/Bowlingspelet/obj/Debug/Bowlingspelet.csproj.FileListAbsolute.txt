@@ -1,0 +1,12 @@
+C:\Users\jhigg\Dropbox\Programs\Dev work\Bowlingspelet\Bowlingspelet\bin\Debug\Bowlingspelet.exe.config
+C:\Users\jhigg\Dropbox\Programs\Dev work\Bowlingspelet\Bowlingspelet\bin\Debug\Bowlingspelet.exe
+C:\Users\jhigg\Dropbox\Programs\Dev work\Bowlingspelet\Bowlingspelet\bin\Debug\Bowlingspelet.pdb
+C:\Users\jhigg\Dropbox\Programs\Dev work\Bowlingspelet\Bowlingspelet\obj\Debug\Bowlingspelet.csprojAssemblyReference.cache
+C:\Users\jhigg\Dropbox\Programs\Dev work\Bowlingspelet\Bowlingspelet\obj\Debug\Bowlingspelet.mainMenu.resources
+C:\Users\jhigg\Dropbox\Programs\Dev work\Bowlingspelet\Bowlingspelet\obj\Debug\Bowlingspelet.Properties.Resources.resources
+C:\Users\jhigg\Dropbox\Programs\Dev work\Bowlingspelet\Bowlingspelet\obj\Debug\Bowlingspelet.csproj.GenerateResource.cache
+C:\Users\jhigg\Dropbox\Programs\Dev work\Bowlingspelet\Bowlingspelet\obj\Debug\Bowlingspelet.csproj.CoreCompileInputs.cache
+C:\Users\jhigg\Dropbox\Programs\Dev work\Bowlingspelet\Bowlingspelet\obj\Debug\Bowlingspelet.exe
+C:\Users\jhigg\Dropbox\Programs\Dev work\Bowlingspelet\Bowlingspelet\obj\Debug\Bowlingspelet.pdb
+C:\Users\jhigg\Dropbox\Programs\Dev work\Bowlingspelet\Bowlingspelet\obj\Debug\Bowlingspelet.game.resources
+C:\Users\jhigg\Dropbox\Programs\Dev work\Bowlingspelet\Bowlingspelet\obj\Debug\Bowlingspelet.rules.resources
