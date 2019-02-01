@@ -22,3 +22,22 @@ Load Play form
       On 10th round players can have 3 bowls instead of 2
     
     Take user back to main menu if 'exit' is clicked
+    
+Pseudo on Scoring
+Bowl button pressed for player
+ randomly generate number between 1-10
+  if number = 10
+   STRIKE, score will be calculated as such:
+   10 + first bowl after strike + second bowl after strike
+   end loop (skip next generation)
+  else
+   note number as first score
+   
+  randomly generate number from 1 - (10 - previous score)
+   if score 1 + score 2 = 10
+    SPARE, score will be calculated as such:
+    10 + first bowl after spare
+   else
+    score 1 + score 2 + total score = total score
+    
+  end
