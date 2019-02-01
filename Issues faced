@@ -1,3 +1,8 @@
 Issues faced
 
+UPDATE 1
 Scoring.
+When clicking the Bowl button both scores for player 1 and 2 would be the same. When using a breakpoint to debug the issue disappeared. 
+Spent about 30 minutes trying to resolve this, found that my PC was running it too quickly after some searching online, resolved it by
+adding "Using System.Threading" and "Thread.Sleep(50)" resolved this issue and now is working by giving different scores for each
+player.
