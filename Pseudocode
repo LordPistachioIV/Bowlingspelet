@@ -29,6 +29,7 @@ Bowl button pressed for player
   if number = 10
    STRIKE, score will be calculated as such:
    10 + first bowl after strike + second bowl after strike
+   set strike flag to true
    end loop (skip next generation)
   else
    note number as first score
@@ -37,6 +38,7 @@ Bowl button pressed for player
    if score 1 + score 2 = 10
     SPARE, score will be calculated as such:
     10 + first bowl after spare
+    set spare flag to true
    else
     score 1 + score 2 + total score = total score
     
