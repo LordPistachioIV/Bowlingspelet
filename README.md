@@ -1,4 +1,4 @@
-# Bowling-Spelet
+# Bowlingspelet
 The Bowling game created in C#
 
 Requirements
