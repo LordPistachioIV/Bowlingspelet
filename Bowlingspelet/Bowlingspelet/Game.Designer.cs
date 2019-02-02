@@ -119,7 +119,7 @@
             this.gamePnl.Controls.Add(this.player2NameLbl);
             this.gamePnl.Controls.Add(this.player1NameLbl);
             this.gamePnl.Controls.Add(this.enterNamesLbl);
-            this.gamePnl.Location = new System.Drawing.Point(475, 278);
+            this.gamePnl.Location = new System.Drawing.Point(0, 0);
             this.gamePnl.Name = "gamePnl";
             this.gamePnl.Size = new System.Drawing.Size(578, 307);
             this.gamePnl.TabIndex = 0;
@@ -247,7 +247,8 @@
             // 
             this.p1B1R1Lbl.AutoSize = true;
             this.p1B1R1Lbl.BackColor = System.Drawing.Color.Transparent;
-            this.p1B1R1Lbl.Location = new System.Drawing.Point(19, 85);
+            this.p1B1R1Lbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.p1B1R1Lbl.Location = new System.Drawing.Point(18, 85);
             this.p1B1R1Lbl.Name = "p1B1R1Lbl";
             this.p1B1R1Lbl.Size = new System.Drawing.Size(10, 13);
             this.p1B1R1Lbl.TabIndex = 6;
@@ -868,7 +869,7 @@
             // 
             this.p2B1R1Lbl.AutoSize = true;
             this.p2B1R1Lbl.BackColor = System.Drawing.Color.Transparent;
-            this.p2B1R1Lbl.Location = new System.Drawing.Point(20, 213);
+            this.p2B1R1Lbl.Location = new System.Drawing.Point(18, 213);
             this.p2B1R1Lbl.Name = "p2B1R1Lbl";
             this.p2B1R1Lbl.Size = new System.Drawing.Size(10, 13);
             this.p2B1R1Lbl.TabIndex = 38;
