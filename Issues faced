@@ -6,3 +6,10 @@ When clicking the Bowl button both scores for player 1 and 2 would be the same. 
 Spent about 30 minutes trying to resolve this, found that my PC was running it too quickly after some searching online, resolved it by
 adding "Using System.Threading" and "Thread.Sleep(50)" resolved this issue and now is working by giving different scores for each
 player.
+
+UPDATE 2
+Strikes.
+Main issue with strikes is that you can have up to 3 strikes in a row, so for every round after 2 there will have to be 2 checks for
+strikes to make sure that the maximum score (300 points, a strike every round with 3 on round 10). Working out the best way of doing this.
+Currently the best idea to check for three strikes in a row (e.g. a strike every round up to the 3rd round) and have that check from 3rd
+round to 10th round to avoid unneccessary code.
