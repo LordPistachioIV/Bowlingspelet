@@ -24,12 +24,12 @@ namespace Bowlingspelet
                 case 1:
                     beat1 = bowling(0);
                     beat2 = bowling(beat1);
+                    //randomly generating the beats for player 1
 
                     if (beat1 == 10)
                     {
                         p1B1R1Lbl.Text = "X";
                         player1Strike++;
-                        
                     }
                     else if (beat1 + beat2 == 10)
                     {
@@ -51,6 +51,7 @@ namespace Bowlingspelet
 
                     beat1 = bowling(0);
                     beat2 = bowling(beat1);
+                    //randomly generating the beats for player 2
 
                     if (beat1 == 10)
                     {
@@ -77,6 +78,7 @@ namespace Bowlingspelet
                 case 2:
                     beat1 = bowling(0);
                     beat2 = bowling(beat1);
+                    //randomly generating the beats for player 1
 
                     if (beat1 == 10)
                     {
@@ -87,7 +89,13 @@ namespace Bowlingspelet
                             p1Round1ScoreLbl.Text = player1Score.ToString();
                             player1Spare--;
                         }
+                        //if (player1Strike > 1)
+                        /* 
+                         * No check for strike here as if there are 2 strikes in a row
+                         * then nothing will be done as only 2 scores have been taken
+                         */
                         player1Strike++;
+                        //Increase strike counter by 1 as a strike has been achieved.
                     }
                     else if (beat1 + beat2 == 10)
                     {
@@ -98,21 +106,61 @@ namespace Bowlingspelet
                             player1Score = 10 + beat1 + player1Score;
                             p1Round1ScoreLbl.Text = player1Score.ToString();
                             player1Spare--;
+                            /*
+                             * If spare is active take the score of 10 from previous round
+                             * Add on the score from the first beat in the current round
+                             * Set total as score for previous round.
+                             * Reduce spare counter by 1.
+                             */
+                        }
+                        else if (player1Strike == 1)
+                        {
+                            player1Score = 10 + beat1 + beat2 + player1Score;
+                            p1Round1ScoreLbl.Text = player1Score.ToString();
+                            player1Strike--;
+                            /*
+                             * If strike is active by 1 take the score of 10 from previous round
+                             * Add on the two scores from the current round 
+                             * Set total as score for previous round.
+                             * Reduce strike counter by 1.
+                             */
                         }
                         player1Spare++;
+                        //Increase p1 spare counter by one as a spare has been achieved
                     }
                     else
                     {
                         p1B1R2Lbl.Text = beat1.ToString();
                         p1B2R2Lbl.Text = beat2.ToString();
+                        //randomly generating the beats for player 1
+
                         if (player1Spare > 0)
                         {
                             player1Score = 10 + beat1 + player1Score;
                             p1Round1ScoreLbl.Text = player1Score.ToString();
                             player1Spare--;
+                            /*
+                             * If spare is active take the score of 10 from previous round
+                             * Add on the score from the first beat in the current round
+                             * Set total as score for previous round.
+                             * Reduce spare counter by 1.
+                             */
+                        }
+                        else if (player1Strike == 1)
+                        {
+                            player1Score = 10 + beat1 + beat2 + player1Score;
+                            p1Round1ScoreLbl.Text = player1Score.ToString();
+                            player1Strike--;
+                            /*
+                             * If strike is active by 1 take the score of 10 from previous round
+                             * Add on the two scores from the current round 
+                             * Set total as score for previous round.
+                             * Reduce strike counter by 1.
+                             */
                         }
                         player1Score = beat1 + beat2 + player1Score;
                         p1Round2ScoreLbl.Text = player1Score.ToString();
+                        //Set score for this round.
                     }
                     //update scoreboard player 1
 
@@ -121,6 +169,7 @@ namespace Bowlingspelet
 
                     beat1 = bowling(0);
                     beat2 = bowling(beat1);
+                    //randomly generating the beats for player 2
 
                     if (beat1 == 10)
                     {
@@ -142,6 +191,24 @@ namespace Bowlingspelet
                             player2Score = 10 + beat1 + player2Score;
                             p2Round1ScoreLbl.Text = player2Score.ToString();
                             player2Spare--;
+                            /*
+                             * If spare is active take the score of 10 from previous round
+                             * Add on the score from the first beat in the current round
+                             * Set total as score for previous round.
+                             * Reduce spare counter by 1.
+                             */
+                        }
+                        else if (player2Strike == 1)
+                        {
+                            player2Score = 10 + beat1 + beat2 + player2Score;
+                            p2Round1ScoreLbl.Text = player2Score.ToString();
+                            player2Strike--;
+                            /*
+                             * If strike is active by 1 take the score of 10 from previous round
+                             * Add on the two scores from the current round 
+                             * Set total as score for previous round.
+                             * Reduce strike counter by 1.
+                             */
                         }
                         player2Spare++;
                     }
@@ -154,6 +221,24 @@ namespace Bowlingspelet
                             player2Score = 10 + beat1 + player2Score;
                             p2Round1ScoreLbl.Text = player2Score.ToString();
                             player2Spare--;
+                            /*
+                             * If spare is active take the score of 10 from previous round
+                             * Add on the score from the first beat in the current round
+                             * Set total as score for previous round.
+                             * Reduce spare counter by 1.
+                             */
+                        }
+                        else if (player2Strike == 1)
+                        {
+                            player2Score = 10 + beat1 + beat2 + player2Score;
+                            p2Round1ScoreLbl.Text = player2Score.ToString();
+                            player2Strike--;
+                            /*
+                             * If strike is active by 1 take the score of 10 from previous round
+                             * Add on the two scores from the current round 
+                             * Set total as score for previous round.
+                             * Reduce strike counter by 1.
+                             */
                         }
                         player2Score = beat1 + beat2 + player2Score;
                         p2Round2ScoreLbl.Text = player2Score.ToString();
@@ -165,6 +250,7 @@ namespace Bowlingspelet
                 case 3:
                     beat1 = bowling(0);
                     beat2 = bowling(beat1);
+                    //randomly generating the beats for player 1
 
                     if (beat1 == 10)
                     {
@@ -187,6 +273,12 @@ namespace Bowlingspelet
                             p1Round2ScoreLbl.Text = player1Score.ToString();
                             player1Spare--;
                         }
+                        else if (player1Strike == 1)
+                        {
+                            player1Score = 10 + beat1 + beat2 + player1Score;
+                            p1Round2ScoreLbl.Text = player1Score.ToString();
+                            player1Strike--;
+                        }
                         player1Spare++;
                     }
                     else
@@ -199,6 +291,12 @@ namespace Bowlingspelet
                             p1Round2ScoreLbl.Text = player1Score.ToString();
                             player1Spare--;
                         }
+                        else if (player1Strike == 1)
+                        {
+                            player1Score = 10 + beat1 + beat2 + player1Score;
+                            p1Round2ScoreLbl.Text = player1Score.ToString();
+                            player1Strike--;
+                        }
                         player1Score = beat1 + beat2 + player1Score;
                         p1Round3ScoreLbl.Text = player1Score.ToString();
                     }
@@ -209,6 +307,7 @@ namespace Bowlingspelet
 
                     beat1 = bowling(0);
                     beat2 = bowling(beat1);
+                    //randomly generating the beats for player 2
 
                     if (beat1 == 10)
                     {
@@ -231,6 +330,12 @@ namespace Bowlingspelet
                             p2Round2ScoreLbl.Text = player2Score.ToString();
                             player2Spare--;
                         }
+                        else if (player2Strike == 1)
+                        {
+                            player2Score = 10 + beat1 + beat2 + player2Score;
+                            p2Round2ScoreLbl.Text = player2Score.ToString();
+                            player2Strike--;
+                        }
                         player2Spare++;
                     }
                     else
@@ -243,6 +348,12 @@ namespace Bowlingspelet
                             p2Round2ScoreLbl.Text = player2Score.ToString();
                             player2Spare--;
                         }
+                        else if (player2Strike == 1)
+                        {
+                            player2Score = 10 + beat1 + beat2 + player2Score;
+                            p2Round2ScoreLbl.Text = player2Score.ToString();
+                            player2Strike--;
+                        }
                         player2Score = beat1 + beat2 + player2Score;
                         p2Round3ScoreLbl.Text = player2Score.ToString();
                     }
@@ -253,6 +364,7 @@ namespace Bowlingspelet
                 case 4:
                     beat1 = bowling(0);
                     beat2 = bowling(beat1);
+                    //randomly generating the beats for player 1
 
                     if (beat1 == 10)
                     {
@@ -275,6 +387,12 @@ namespace Bowlingspelet
                             p1Round3ScoreLbl.Text = player1Score.ToString();
                             player1Spare--;
                         }
+                        else if (player1Strike == 1)
+                        {
+                            player1Score = 10 + beat1 + beat2 + player1Score;
+                            p1Round3ScoreLbl.Text = player1Score.ToString();
+                            player1Strike--;
+                        }
                         player1Spare++;
                     }
                     else
@@ -287,6 +405,12 @@ namespace Bowlingspelet
                             p1Round3ScoreLbl.Text = player1Score.ToString();
                             player1Spare--;
                         }
+                        else if (player1Strike == 1)
+                        {
+                            player1Score = 10 + beat1 + beat2 + player1Score;
+                            p1Round3ScoreLbl.Text = player1Score.ToString();
+                            player1Strike--;
+                        }
                         player1Score = beat1 + beat2 + player1Score;
                         p1Round4ScoreLbl.Text = player1Score.ToString();
                     }
@@ -297,6 +421,7 @@ namespace Bowlingspelet
 
                     beat1 = bowling(0);
                     beat2 = bowling(beat1);
+                    //randomly generating the beats for player 2
 
                     if (beat1 == 10)
                     {
@@ -319,6 +444,12 @@ namespace Bowlingspelet
                             p2Round3ScoreLbl.Text = player2Score.ToString();
                             player2Spare--;
                         }
+                        else if (player2Strike == 1)
+                        {
+                            player2Score = 10 + beat1 + beat2 + player2Score;
+                            p2Round3ScoreLbl.Text = player2Score.ToString();
+                            player2Strike--;
+                        }
                         player2Spare++;
                     }
                     else
@@ -331,6 +462,12 @@ namespace Bowlingspelet
                             p2Round3ScoreLbl.Text = player2Score.ToString();
                             player2Spare--;
                         }
+                        else if (player2Strike == 1)
+                        {
+                            player2Score = 10 + beat1 + beat2 + player2Score;
+                            p2Round3ScoreLbl.Text = player2Score.ToString();
+                            player2Strike--;
+                        }
                         player2Score = beat1 + beat2 + player2Score;
                         p2Round4ScoreLbl.Text = player2Score.ToString();
                     }
@@ -341,6 +478,7 @@ namespace Bowlingspelet
                 case 5:
                     beat1 = bowling(0);
                     beat2 = bowling(beat1);
+                    //randomly generating the beats for player 1
 
                     if (beat1 == 10)
                     {
@@ -363,6 +501,12 @@ namespace Bowlingspelet
                             p1Round4ScoreLbl.Text = player1Score.ToString();
                             player1Spare--;
                         }
+                        else if (player1Strike == 1)
+                        {
+                            player1Score = 10 + beat1 + beat2 + player1Score;
+                            p1Round4ScoreLbl.Text = player1Score.ToString();
+                            player1Strike--;
+                        }
                         player1Spare++;
                     }
                     else
@@ -375,6 +519,12 @@ namespace Bowlingspelet
                             p1Round4ScoreLbl.Text = player1Score.ToString();
                             player1Spare--;
                         }
+                        else if (player1Strike == 1)
+                        {
+                            player1Score = 10 + beat1 + beat2 + player1Score;
+                            p1Round4ScoreLbl.Text = player1Score.ToString();
+                            player1Strike--;
+                        }
                         player1Score = beat1 + beat2 + player1Score;
                         p1Round5ScoreLbl.Text = player1Score.ToString();
                     }
@@ -385,6 +535,7 @@ namespace Bowlingspelet
 
                     beat1 = bowling(0);
                     beat2 = bowling(beat1);
+                    //randomly generating the beats for player 2
 
                     if (beat1 == 10)
                     {
@@ -407,6 +558,12 @@ namespace Bowlingspelet
                             p2Round4ScoreLbl.Text = player2Score.ToString();
                             player2Spare--;
                         }
+                        else if (player2Strike == 1)
+                        {
+                            player2Score = 10 + beat1 + beat2 + player2Score;
+                            p2Round4ScoreLbl.Text = player2Score.ToString();
+                            player2Strike--;
+                        }
                         player2Spare++;
                     }
                     else
@@ -419,6 +576,12 @@ namespace Bowlingspelet
                             p2Round4ScoreLbl.Text = player2Score.ToString();
                             player2Spare--;
                         }
+                        else if (player2Strike == 1)
+                        {
+                            player2Score = 10 + beat1 + beat2 + player2Score;
+                            p2Round4ScoreLbl.Text = player2Score.ToString();
+                            player2Strike--;
+                        }
                         player2Score = beat1 + beat2 + player2Score;
                         p2Round5ScoreLbl.Text = player2Score.ToString();
                     }
@@ -429,6 +592,7 @@ namespace Bowlingspelet
                 case 6:
                     beat1 = bowling(0);
                     beat2 = bowling(beat1);
+                    //randomly generating the beats for player 1
 
                     if (beat1 == 10)
                     {
@@ -452,6 +616,12 @@ namespace Bowlingspelet
                             p1Round5ScoreLbl.Text = player1Score.ToString();
                             player1Spare--;
                         }
+                        else if (player1Strike == 1)
+                        {
+                            player1Score = 10 + beat1 + beat2 + player1Score;
+                            p1Round5ScoreLbl.Text = player1Score.ToString();
+                            player1Strike--;
+                        }
                         player1Spare++;
                     }
                     else
@@ -464,6 +634,12 @@ namespace Bowlingspelet
                             p1Round5ScoreLbl.Text = player1Score.ToString();
                             player1Spare--;
                         }
+                        else if (player1Strike == 1)
+                        {
+                            player1Score = 10 + beat1 + beat2 + player1Score;
+                            p1Round5ScoreLbl.Text = player1Score.ToString();
+                            player1Strike--;
+                        }
                         player1Score = beat1 + beat2 + player1Score;
                         p1Round6ScoreLbl.Text = player1Score.ToString();
                     }
@@ -474,6 +650,7 @@ namespace Bowlingspelet
 
                     beat1 = bowling(0);
                     beat2 = bowling(beat1);
+                    //randomly generating the beats for player 2
 
                     if (beat1 == 10)
                     {
@@ -496,6 +673,12 @@ namespace Bowlingspelet
                             p2Round5ScoreLbl.Text = player2Score.ToString();
                             player2Spare--;
                         }
+                        else if (player2Strike == 1)
+                        {
+                            player2Score = 10 + beat1 + beat2 + player2Score;
+                            p2Round5ScoreLbl.Text = player2Score.ToString();
+                            player2Strike--;
+                        }
                         player2Spare++;
                     }
                     else
@@ -508,6 +691,12 @@ namespace Bowlingspelet
                             p2Round5ScoreLbl.Text = player2Score.ToString();
                             player2Spare--;
                         }
+                        else if (player2Strike == 1)
+                        {
+                            player2Score = 10 + beat1 + beat2 + player2Score;
+                            p2Round5ScoreLbl.Text = player2Score.ToString();
+                            player2Strike--;
+                        }
                         player2Score = beat1 + beat2 + player2Score;
                         p2Round6ScoreLbl.Text = player2Score.ToString();
                     }
@@ -518,6 +707,7 @@ namespace Bowlingspelet
                 case 7:
                     beat1 = bowling(0);
                     beat2 = bowling(beat1);
+                    //randomly generating the beats for player 1
 
                     if (beat1 == 10)
                     {
@@ -540,6 +730,12 @@ namespace Bowlingspelet
                             p1Round6ScoreLbl.Text = player1Score.ToString();
                             player1Spare--;
                         }
+                        else if (player1Strike == 1)
+                        {
+                            player1Score = 10 + beat1 + beat2 + player1Score;
+                            p1Round6ScoreLbl.Text = player1Score.ToString();
+                            player1Strike--;
+                        }
                         player1Spare++;
                     }
                     else
@@ -552,6 +748,12 @@ namespace Bowlingspelet
                             p1Round6ScoreLbl.Text = player1Score.ToString();
                             player1Spare--;
                         }
+                        else if (player1Strike == 1)
+                        {
+                            player1Score = 10 + beat1 + beat2 + player1Score;
+                            p1Round6ScoreLbl.Text = player1Score.ToString();
+                            player1Strike--;
+                        }
                         player1Score = beat1 + beat2 + player1Score;
                         p1Round7ScoreLbl.Text = player1Score.ToString();
                     }
@@ -562,6 +764,7 @@ namespace Bowlingspelet
 
                     beat1 = bowling(0);
                     beat2 = bowling(beat1);
+                    //randomly generating the beats for player 2
 
                     if (beat1 == 10)
                     {
@@ -584,6 +787,12 @@ namespace Bowlingspelet
                             p2Round6ScoreLbl.Text = player2Score.ToString();
                             player2Spare--;
                         }
+                        else if (player2Strike == 1)
+                        {
+                            player2Score = 10 + beat1 + beat2 + player2Score;
+                            p2Round6ScoreLbl.Text = player2Score.ToString();
+                            player2Strike--;
+                        }
                         player2Spare++;
                     }
                     else
@@ -596,6 +805,12 @@ namespace Bowlingspelet
                             p2Round6ScoreLbl.Text = player2Score.ToString();
                             player2Spare--;
                         }
+                        else if (player2Strike == 1)
+                        {
+                            player2Score = 10 + beat1 + beat2 + player2Score;
+                            p2Round6ScoreLbl.Text = player2Score.ToString();
+                            player2Strike--;
+                        }
                         player2Score = beat1 + beat2 + player2Score;
                         p2Round7ScoreLbl.Text = player2Score.ToString();
                     }
@@ -606,6 +821,7 @@ namespace Bowlingspelet
                 case 8:
                     beat1 = bowling(0);
                     beat2 = bowling(beat1);
+                    //randomly generating the beats for player 1
 
                     if (beat1 == 10)
                     {
@@ -629,6 +845,12 @@ namespace Bowlingspelet
                             p1Round7ScoreLbl.Text = player1Score.ToString();
                             player1Spare--;
                         }
+                        else if (player1Strike == 1)
+                        {
+                            player1Score = 10 + beat1 + beat2 + player1Score;
+                            p1Round7ScoreLbl.Text = player1Score.ToString();
+                            player1Strike--;
+                        }
                         player1Spare++;
                     }
                     else
@@ -641,6 +863,12 @@ namespace Bowlingspelet
                             p1Round7ScoreLbl.Text = player1Score.ToString();
                             player1Spare--;
                         }
+                        else if (player1Strike == 1)
+                        {
+                            player1Score = 10 + beat1 + beat2 + player1Score;
+                            p1Round7ScoreLbl.Text = player1Score.ToString();
+                            player1Strike--;
+                        }
                         player1Score = beat1 + beat2 + player1Score;
                         p1Round8ScoreLbl.Text = player1Score.ToString();
                     }
@@ -651,6 +879,7 @@ namespace Bowlingspelet
 
                     beat1 = bowling(0);
                     beat2 = bowling(beat1);
+                    //randomly generating the beats for player 2
 
                     if (beat1 == 10)
                     {
@@ -673,6 +902,12 @@ namespace Bowlingspelet
                             p2Round7ScoreLbl.Text = player2Score.ToString();
                             player2Spare--;
                         }
+                        else if (player2Strike == 1)
+                        {
+                            player2Score = 10 + beat1 + beat2 + player2Score;
+                            p2Round7ScoreLbl.Text = player2Score.ToString();
+                            player2Strike--;
+                        }
                         player2Spare++;
                     }
                     else
@@ -685,6 +920,12 @@ namespace Bowlingspelet
                             p2Round7ScoreLbl.Text = player2Score.ToString();
                             player2Spare--;
                         }
+                        else if (player2Strike == 1)
+                        {
+                            player2Score = 10 + beat1 + beat2 + player2Score;
+                            p2Round7ScoreLbl.Text = player2Score.ToString();
+                            player2Strike--;
+                        }
                         player2Score = beat1 + beat2 + player2Score;
                         p2Round8ScoreLbl.Text = player2Score.ToString();
                     }
@@ -695,6 +936,7 @@ namespace Bowlingspelet
                 case 9:
                     beat1 = bowling(0);
                     beat2 = bowling(beat1);
+                    //randomly generating the beats for player 1
 
                     if (beat1 == 10)
                     {
@@ -717,6 +959,12 @@ namespace Bowlingspelet
                             p1Round8ScoreLbl.Text = player1Score.ToString();
                             player1Spare--;
                         }
+                        else if (player1Strike == 1)
+                        {
+                            player1Score = 10 + beat1 + beat2 + player1Score;
+                            p1Round8ScoreLbl.Text = player1Score.ToString();
+                            player1Strike--;
+                        }
                         player1Spare++;
                     }
                     else
@@ -729,6 +977,12 @@ namespace Bowlingspelet
                             p1Round8ScoreLbl.Text = player1Score.ToString();
                             player1Spare--;
                         }
+                        else if (player1Strike == 1)
+                        {
+                            player1Score = 10 + beat1 + beat2 + player1Score;
+                            p1Round8ScoreLbl.Text = player1Score.ToString();
+                            player1Strike--;
+                        }
                         player1Score = beat1 + beat2 + player1Score;
                         p1Round9ScoreLbl.Text = player1Score.ToString();
                     }
@@ -739,6 +993,7 @@ namespace Bowlingspelet
 
                     beat1 = bowling(0);
                     beat2 = bowling(beat1);
+                    //randomly generating the beats for player 2
 
                     if (beat1 == 10)
                     {
@@ -761,6 +1016,12 @@ namespace Bowlingspelet
                             p2Round8ScoreLbl.Text = player2Score.ToString();
                             player2Spare--;
                         }
+                        else if (player2Strike == 1)
+                        {
+                            player2Score = 10 + beat1 + beat2 + player2Score;
+                            p2Round8ScoreLbl.Text = player2Score.ToString();
+                            player2Strike--;
+                        }
                         player2Spare++;
                     }
                     else
@@ -773,6 +1034,12 @@ namespace Bowlingspelet
                             p2Round8ScoreLbl.Text = player2Score.ToString();
                             player2Spare--;
                         }
+                        else if (player2Strike == 1)
+                        {
+                            player2Score = 10 + beat1 + beat2 + player2Score;
+                            p2Round8ScoreLbl.Text = player2Score.ToString();
+                            player2Strike--;
+                        }
                         player2Score = beat1 + beat2 + player2Score;
                         p2Round9ScoreLbl.Text = player2Score.ToString();
                     }
@@ -783,6 +1050,7 @@ namespace Bowlingspelet
                 case 10:
                     beat1 = bowling(0);
                     beat2 = bowling(beat1);
+                    //randomly generating the beats for player 1
 
                     if (beat1 == 10)
                     {
@@ -805,6 +1073,12 @@ namespace Bowlingspelet
                             p1Round9ScoreLbl.Text = player1Score.ToString();
                             player1Spare--;
                         }
+                        else if (player1Strike == 1)
+                        {
+                            player1Score = 10 + beat1 + beat2 + player1Score;
+                            p1Round9ScoreLbl.Text = player1Score.ToString();
+                            player1Strike--;
+                        }
                         player1Spare++;
                     }
                     else
@@ -817,6 +1091,12 @@ namespace Bowlingspelet
                             p1Round9ScoreLbl.Text = player1Score.ToString();
                             player1Spare--;
                         }
+                        else if (player1Strike == 1)
+                        {
+                            player1Score = 10 + beat1 + beat2 + player1Score;
+                            p1Round9ScoreLbl.Text = player1Score.ToString();
+                            player1Strike--;
+                        }
                         player1Score = beat1 + beat2 + player1Score;
                         p1Round10ScoreLbl.Text = player1Score.ToString();
                     }
@@ -827,6 +1107,7 @@ namespace Bowlingspelet
 
                     beat1 = bowling(0);
                     beat2 = bowling(beat1);
+                    //randomly generating the beats for player 2
 
                     if (beat1 == 10)
                     {
@@ -849,6 +1130,12 @@ namespace Bowlingspelet
                             p2Round9ScoreLbl.Text = player2Score.ToString();
                             player2Spare--;
                         }
+                        else if (player2Strike == 1)
+                        {
+                            player2Score = 10 + beat1 + beat2 + player2Score;
+                            p2Round9ScoreLbl.Text = player2Score.ToString();
+                            player2Strike--;
+                        }
                         player2Spare++;
                     }
                     else
@@ -860,6 +1147,12 @@ namespace Bowlingspelet
                             player2Score = 10 + beat1 + player2Score;
                             p2Round9ScoreLbl.Text = player2Score.ToString();
                             player2Spare--;
+                        }
+                        else if (player2Strike == 1)
+                        {
+                            player2Score = 10 + beat1 + beat2 + player2Score;
+                            p2Round9ScoreLbl.Text = player2Score.ToString();
+                            player2Strike--;
                         }
                         player2Score = beat1 + beat2 + player2Score;
                         p2Round10ScoreLbl.Text = player2Score.ToString();
