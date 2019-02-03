@@ -949,7 +949,9 @@
             this.Controls.Add(this.p1B1R4Lbl);
             this.Controls.Add(this.p1SBPic);
             this.Controls.Add(this.p2SCPic);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "game";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bowling";
             this.Load += new System.EventHandler(this.game_Load);
             this.gamePnl.ResumeLayout(false);
