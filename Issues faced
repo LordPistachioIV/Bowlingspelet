@@ -12,12 +12,17 @@ Strikes.
 Main issue with strikes is that you can have up to 3 strikes in a row, so for every round after 2 there will have to be 2 checks for
 strikes to make sure that the maximum score (300 points, a strike every round with 3 on round 10). Working out the best way of doing this.
 Currently the best idea to check for three strikes in a row (e.g. a strike every round up to the 3rd round) and have that check from 3rd
-round to 10th round to avoid unneccessary code.
+round to 10th round to avoid unnecessary code.
 
 UPDATE 3
 Strikes
-I have seqencial strikes working, an additional check in all checks for the seqencial strike are in place and allow it to work up up to
+I have sequential strikes working, an additional check in all checks for the sequential strike are in place and allow it to work up to
 round 7 (calculated in round 9) as sequential strikes in round 8 and 9 depend on round 10. Round 10 is still causing some slight problems
 as the way of scoring is different in it as apposed to rounds 1 - 9. Working on making it work as needed without having nested ifs inside
 of nested ifs inside of nested ifs and so on. Current idea is: Round 10 with a do while so I can make sure that if there is a strike or 
 a spare then the player can have the extra turn otherwise they don't get the extra beat.
+
+UPDATE 4
+Strikes and round 10
+Sequential strikes were working but the original code broke the standard strikes, I have fixed this by changing the order of which the
+checks are done. All strikes, sequential strikes and spares are working. Round 10 has all possibilities working.
