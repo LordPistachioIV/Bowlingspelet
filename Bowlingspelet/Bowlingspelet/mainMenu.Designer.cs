@@ -71,11 +71,11 @@
             // 
             this.welcomeLbl.AutoSize = true;
             this.welcomeLbl.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.welcomeLbl.Location = new System.Drawing.Point(79, 20);
+            this.welcomeLbl.Location = new System.Drawing.Point(16, 24);
             this.welcomeLbl.Name = "welcomeLbl";
-            this.welcomeLbl.Size = new System.Drawing.Size(90, 25);
+            this.welcomeLbl.Size = new System.Drawing.Size(225, 25);
             this.welcomeLbl.TabIndex = 3;
-            this.welcomeLbl.Text = "Welcome!";
+            this.welcomeLbl.Text = "Welcome to Bowlingspelet!";
             // 
             // mainMenu
             // 
@@ -86,7 +86,9 @@
             this.Controls.Add(this.playBtn);
             this.Controls.Add(this.rulesBtn);
             this.Controls.Add(this.exitBtn);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "mainMenu";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bowling";
             this.ResumeLayout(false);
             this.PerformLayout();
