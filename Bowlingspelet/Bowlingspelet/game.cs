@@ -57,7 +57,7 @@ namespace Bowlingspelet
                     }
                     //update scoreboard player 1
 
-                    Thread.Sleep(50);
+                    Thread.Sleep(100);
                     //program runs too quickly causing p1&p2 scores to be the same
 
                     beat1 = bowling(0);
@@ -175,7 +175,7 @@ namespace Bowlingspelet
                     }
                     //update scoreboard player 1
 
-                    Thread.Sleep(50);
+                    Thread.Sleep(100);
                     //program runs too quickly causing p1&p2 scores to be the same
 
                     beat1 = bowling(0);
@@ -362,7 +362,7 @@ namespace Bowlingspelet
                     }
                     //update scoreboard player 1
 
-                    Thread.Sleep(50);
+                    Thread.Sleep(100);
                     //program runs too quickly causing p1&p2 scores to be the same
 
                     beat1 = bowling(0);
@@ -512,7 +512,7 @@ namespace Bowlingspelet
                     }
                     //update scoreboard player 1
 
-                    Thread.Sleep(50);
+                    Thread.Sleep(100);
                     //program runs too quickly causing p1&p2 scores to be the same
 
                     beat1 = bowling(0);
@@ -662,7 +662,7 @@ namespace Bowlingspelet
                     }
                     //update scoreboard player 1
 
-                    Thread.Sleep(50);
+                    Thread.Sleep(100);
                     //program runs too quickly causing p1&p2 scores to be the same
 
                     beat1 = bowling(0);
@@ -813,7 +813,7 @@ namespace Bowlingspelet
                     }
                     //update scoreboard player 1
 
-                    Thread.Sleep(50);
+                    Thread.Sleep(100);
                     //program runs too quickly causing p1&p2 scores to be the same
 
                     beat1 = bowling(0);
@@ -963,7 +963,7 @@ namespace Bowlingspelet
                     }
                     //update scoreboard player 1
 
-                    Thread.Sleep(50);
+                    Thread.Sleep(100);
                     //program runs too quickly causing p1&p2 scores to be the same
 
                     beat1 = bowling(0);
@@ -1113,7 +1113,7 @@ namespace Bowlingspelet
                     }
                     //update scoreboard player 1
 
-                    Thread.Sleep(50);
+                    Thread.Sleep(100);
                     //program runs too quickly causing p1&p2 scores to be the same
 
                     beat1 = bowling(0);
@@ -1263,7 +1263,7 @@ namespace Bowlingspelet
                     }
                     //update scoreboard player 1
 
-                    Thread.Sleep(50);
+                    Thread.Sleep(100);
                     //program runs too quickly causing p1&p2 scores to be the same
 
                     beat1 = bowling(0);
@@ -1492,7 +1492,7 @@ namespace Bowlingspelet
                         }
                     } while (loopCounter != 4);
                     loopCounter = 1;
-                    Thread.Sleep(50);
+                    Thread.Sleep(100);
                     do//player2 do while
                     {
                         switch (loopCounter)
