@@ -16,7 +16,7 @@ namespace Bowlingspelet
          * Display is as shown:
          * RULES OF BOWLING
          * A game of bowling consists of ten rounds. In each round, the bowler will have two chances to knock down as many pins as possible
-         * with their bowling ball. In this game you will be one player vs another, both will be done when the "Bowl" button is clicked. 
+         * with their bowling ball. In this game you will be one player vs another, both turns will be done when the "Bowl" button is clicked. 
          * 
          * If a bowler is able to knock down all ten pins with their first ball, they are awarded a strike (X). If the bowler is able to knock down
          * all 10 pins with the two balls it is known as a spare (/). Bonus points are awarded for both of these, depending on what is scored in the
