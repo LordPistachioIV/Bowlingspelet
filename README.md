@@ -1,5 +1,8 @@
 # Bowlingspelet
-The Bowling game created in C#
+The Bowling game created in C# made in Microsoft Visual Studio Community 2017 V15.9.6
+
+TO RUN!
+Download the "Bowlingspelet" folder, go into "obj>Debug" and run the "Bowlingspelet.exe"
 
 Requirements
 - 2 player (1v1)
